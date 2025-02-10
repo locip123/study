@@ -11,8 +11,8 @@ public class CourseBaseMapperTest {
     @Autowired
     CourseBaseMapper courseBaseMapper;
 
-    @Test
-    public CourseBase list(){
-        courseBaseMapper.selectById()
-    }
+//    @Test
+//    public CourseBase list(){
+//        courseBaseMapper.selectById()
+//    }
 }
