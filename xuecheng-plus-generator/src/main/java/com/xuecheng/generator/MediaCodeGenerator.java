@@ -60,7 +60,7 @@ public class MediaCodeGenerator {
 		dsc.setDbType(DbType.MYSQL);
 		dsc.setUrl("jdbc:mysql://192.168.101.65:3306/xcplus_media"
 				+ "?useUnicode=true&useSSL=false&characterEncoding=utf8");
-		dsc.setDriverName("com.mysql.cj.jdbc.Driver");
+		dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setUsername(DATA_SOURCE_USER_NAME);
 		dsc.setPassword(DATA_SOURCE_PASSWORD);
 		mpg.setDataSource(dsc);

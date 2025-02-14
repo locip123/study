@@ -3,7 +3,7 @@
 <mapper namespace="com.xuecheng.content.mapper.CourseCategoryMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.xuecheng.content.model.po.CourseCategory">
+    <resultMap id="BaseResultMap" type="com.xuecheng.model.po.CourseCategory">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="label" property="label" />
@@ -17,5 +17,16 @@
     <sql id="Base_Column_List">
         id, name, label, parentid, is_show, orderby, is_leaf
     </sql>
+
+    <select id="selectTreeNode" parameterType="string" resultType="com.xuecheng.model.po.dto.CourseCategoryDto">
+        SELECT * FROM (
+                          SELECT * FROM course_category WHERE id = #{id}
+                          UNION ALL
+                          SELECT t2.* FROM course_category t2
+                                               INNER JOIN (
+                              SELECT * FROM course_category WHERE id = #{id}
+                          ) t1 ON t1.id = t2.parentid
+                      ) AS t1
+        ORDER BY t1.id;    </select>
 
 </mapper>

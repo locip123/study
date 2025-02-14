@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
@@ -14,6 +13,7 @@
         <option value="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-plus-parent/pom.xml" />
         <option value="$PROJECT_DIR$/xuecheng-plus-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-system/pom.xml" />
       </list>
     </option>
   </component>
